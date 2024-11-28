@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+th, td{
+ @apply border-[#D9D9D9]/10 border px-4 py-2 text-[#F0F0F0]/70 font-firacode
+}
+
+td{
+ @apply md:text-[20px] text-[10px]
+}
+
+.hamburger{
+ cursor: pointer;
+ width: 24px;
+ height: 24px;
+ transition: all 0.25s;
+ position: relative;
+}
+
+.hamburger-top,.hamburger-middle,.hamburger-bottom{
+ position: absolute;
+ top:0;
+ left:0;
+ width:24px;
+ height:2px;
+ background: white;
+ transform: rotate(0);
+ transition: all 0.5s;
+
+
+}
+
+.hamburger-middle{
+ transform: translateY(7px);
+}
+
+.hamburger-bottom{
+ transform: translateY(14px);
+}
+
+.open{
+ transform: rotate(90deg);
+ transform: translateY(0px);
+}
+
+.open .hamburger-top{
+ transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle{
+ display: none;
+}
+
+.open .hamburger-bottom{
+ transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
