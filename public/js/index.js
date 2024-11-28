@@ -13,10 +13,10 @@ faqContainers.forEach((container) => {
     paragraph.classList.toggle('max-h-screen');
 
     // Toggle the icon
-    if (icon.getAttribute('src') === '/images/plus-icon.svg') {
-      icon.src = '/images/Chevron_Down.svg';
+    if (icon.getAttribute('src') === '/public/images/plus-icon.svg') {
+      icon.src = '/public/images/Chevron_Down.svg';
     } else {
-      icon.src = '/images/plus-icon.svg';
+      icon.src = '/public/images/plus-icon.svg';
     }
   });
 });
